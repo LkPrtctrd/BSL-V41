@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\BSL.v41.Logic\BSL.v41.Logic.csproj"/>
+        <ProjectReference Include="..\BSL.v41.Service\BSL.v41.Service.csproj"/>
+        <ProjectReference Include="..\BSL.v41.Titan\BSL.v41.Titan.csproj"/>
+        <ProjectReference Include="..\BSL.v41.Tools\BSL.v41.Tools.csproj"/>
+    </ItemGroup>
+
+</Project>
