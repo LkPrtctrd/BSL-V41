@@ -6,7 +6,7 @@ C# Brawl Stars server emulator for version 41.150 with online battles
 ### Server ###
 Based on [VeloBrawl](https://github.com/XidMods05/brawl-stars-v36-private-server)
 
-1: Download the server and extract it: [click](https://github.com/LkPrtctrd/BSL-V41/archive/refs/heads/master.zip)
+1: Download the server and extract it: [Click](https://github.com/LkPrtctrd/BSL-V41/archive/refs/heads/master.zip)
 
 2: Open terminal on your computer and go to server directory
 
@@ -19,7 +19,7 @@ Based on [VeloBrawl](https://github.com/XidMods05/brawl-stars-v36-private-server
 6: Follow client instructions
 
 ### Android Client ###
-1: Download the APK here: [sec](https://youtu.be/nYUedpGbfqc) 
+1: Download the APK here: [Click](https://www.mediafire.com/file/yhq6kxqh08da7i9/com.bsl.v41.apk/file) 
 
 2: Change Address (and Port if you need it) in the fяida config (lib/armeabi-v7a/libBSL.config.so)
 
