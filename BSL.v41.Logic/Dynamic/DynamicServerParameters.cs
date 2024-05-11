@@ -137,23 +137,26 @@ public static class DynamicServerParameters
         }).Start();
     }
 
-    public static void ShopRotator()
+public static void ShopRotator(string timeZoneId)
+{
+    new Thread(() =>
     {
-        new Thread(() =>
+        while (true)
         {
-            while (true)
+            var localTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
+                TimeZoneInfo.FindSystemTimeZoneById(timeZoneId));
+
+            if (localTime.Hour != 11) continue;
+
+            for (var i = 1; i <= Databases.AccountDatabase.GetMaxAccountId(); i++)
             {
-                var moscowTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow,
-                    TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time"));
-
-                if (moscowTime.Hour != 11) continue;
-
-                for (var i = 1; i <= Databases.AccountDatabase.GetMaxAccountId(); i++)
-                {
-                    var accountModel = Databases.AccountDatabase.LoadAccount(i);
-                    // todo.
-                }
+                var accountModel = Databases.AccountDatabase.LoadAccount(i);
+                // todo.
             }
-        }).Start();
-    }
+        }
+    }).Start();
+}
+
+
+
 }

@@ -20,6 +20,7 @@ public abstract class Initializer
 {
     protected static void Start()
     {
+        string timeZoneId = TimeZoneInfo.Local.Id;
         Saver.SearchTimeFactor = 1;
         Databases.AccountDatabase = new AccountDatabase("SaveBase/account_database.json");
         Databases.AllianceDatabase = new AllianceDatabase("SaveBase/alliance_database.json");
@@ -33,7 +34,7 @@ public abstract class Initializer
         DynamicServerParameters.DefaultSecTimeForUpdate = 30;
         DynamicServerParameters.InitializeRotateEvents();
         DynamicServerParameters.EventRotator();
-        DynamicServerParameters.ShopRotator();
+        DynamicServerParameters.ShopRotator(timeZoneId);
 
         var ownMatchmakingManager = new OwnMatchmakingManager();
         {
